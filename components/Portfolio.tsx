@@ -1,6 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Portfolio() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const portfolioItems = [
     {
       title: "Fashion Brand",
@@ -51,11 +58,11 @@ export default function Portfolio() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {portfolioItems.map((item, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-xl bg-gray-800 aspect-square cursor-pointer animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl bg-gray-800 aspect-square cursor-pointer animate-scale-in"
+                style={mounted ? { animationDelay: `${index * 0.1}s` } : undefined}
+              >
               <div className="w-full h-full flex items-center justify-center text-6xl bg-gradient-to-br from-gray-700 to-gray-900 transition-transform duration-500 group-hover:scale-110">
                 {item.image}
               </div>

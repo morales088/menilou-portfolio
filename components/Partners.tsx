@@ -1,6 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Partners() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const partners = Array.from({ length: 12 }, (_, i) => ({
     name: `Partner ${i + 1}`,
     icon: "🏢",
@@ -26,7 +33,7 @@ export default function Partners() {
             <div
               key={index}
               className="card bg-white/50 flex items-center justify-center h-24 group cursor-pointer animate-scale-in opacity-60 hover:opacity-100 transition-opacity duration-300"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              style={mounted ? { animationDelay: `${index * 0.05}s` } : undefined}
             >
               <div className="text-3xl transition-transform duration-300 group-hover:scale-110">
                 {partner.icon}

@@ -1,6 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Services() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const services = [
     {
       title: "Social Media Management",
@@ -52,7 +59,7 @@ export default function Services() {
             <div
               key={index}
               className={`card ${service.bgColor} group cursor-pointer animate-scale-in`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={mounted ? { animationDelay: `${index * 0.1}s` } : undefined}
             >
               <div className="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110">
                 {service.icon}

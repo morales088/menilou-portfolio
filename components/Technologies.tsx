@@ -1,6 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Technologies() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const technologies = [
     { name: "Facebook", icon: "📘" },
     { name: "Instagram", icon: "📷" },
@@ -35,7 +42,7 @@ export default function Technologies() {
             <div
               key={index}
               className="card bg-white w-24 h-24 flex flex-col items-center justify-center group cursor-pointer animate-scale-in"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              style={mounted ? { animationDelay: `${index * 0.05}s` } : undefined}
             >
               <div className="text-3xl mb-2 transition-transform duration-300 group-hover:scale-125">
                 {tech.icon}

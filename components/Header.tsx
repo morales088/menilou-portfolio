@@ -5,11 +5,14 @@ import { useState, useEffect } from "react";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    handleScroll(); // Check initial scroll position
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,7 +28,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
-        isScrolled 
+        mounted && isScrolled 
           ? "bg-white/80 backdrop-blur-md shadow-lg" 
           : "bg-transparent"
       }`}
@@ -47,11 +50,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors duration-300 ${
-                  isScrolled 
-                    ? "text-gray-700 hover:text-accent-orange" 
-                    : "text-gray-800 hover:text-accent-orange"
-                }`}
+                className="text-sm font-medium text-gray-800 hover:text-accent-orange transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -97,9 +96,7 @@ export default function Header() {
             isMobileMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
-          <div className={`flex flex-col gap-4 py-4 px-4 rounded-lg ${
-            isScrolled ? "bg-white/90" : "bg-white/90 backdrop-blur-md"
-          }`}>
+          <div className="flex flex-col gap-4 py-4 px-4 rounded-lg bg-white/90 backdrop-blur-md">
             {navLinks.map((link) => (
               <a
                 key={link.href}
