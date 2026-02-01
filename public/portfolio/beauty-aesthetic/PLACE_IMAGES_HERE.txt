@@ -1,0 +1,11 @@
+Place your Beauty Aesthetic client images here:
+
+Required files:
+- cover.jpg (main client card image)
+- social-1.jpg through social-6.jpg (social media samples)
+- design-1.jpg through design-3.jpg (design samples)
+
+You can download the images from:
+https://drive.google.com/drive/folders/1lj_xBOJbaaYj-rmdpM2Fb8q98XMgriTe
+
+Recommended: Pick 6 of the most impressive images and rename them as social-1.jpg through social-6.jpg
