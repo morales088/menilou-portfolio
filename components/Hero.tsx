@@ -9,8 +9,8 @@ export default function Hero() {
     setMounted(true);
   }, []);
   const stats = [
-    { number: "08+", label: "Years Experience in Social Media Management & Advertising", icon: "💼" },
-    { number: "500+", label: "Successful Ad Campaigns Delivered Worldwide", icon: "🎯" },
+    { number: "4+", label: "Years Experience in Social Media Management & Advertising", icon: "💼" },
+    { number: "15+", label: "Successful Client Projects Across Multiple Industries", icon: "🎯" },
     { number: "100%", label: "Client Satisfaction With Result-Driven Strategies", icon: "⭐" },
   ];
 
@@ -20,7 +20,7 @@ export default function Hero() {
       className="bg-background-pink pt-20 md:pt-24 pb-12 md:pb-16 lg:section-padding relative overflow-visible"
     >
       <div className="container-custom">
-        <div className="flex flex-col lg:grid lg:grid-cols-[28%_40%_32%] gap-6 md:gap-8 lg:gap-12 lg:items-end">
+        <div className="flex flex-col lg:grid lg:grid-cols-[28%_40%_32%] gap-6 md:gap-8 lg:gap-12 lg:items-center">
           {/* Mobile Order 1 / Desktop Order 1 - Text Content */}
           <div className="space-y-4 md:space-y-4 lg:space-y-5 animate-fade-in order-1 text-center lg:text-left">
             <div className="inline-block">
@@ -32,10 +32,10 @@ export default function Hero() {
               Menilou Marvida
             </h1>
             <h2 className="text-lg md:text-lg lg:text-xl font-semibold text-gray-800 leading-snug">
-              Virtual Assistant, Social Media Manager & Ads Specialist
+              Marketing Strategist | Social Media & Email Marketing Expert
             </h2>
             <p className="text-base md:text-base text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              I help businesses grow through strategic social media management, effective ad campaigns, and reliable virtual assistance. Let&apos;s elevate your brand together.
+              Results-driven marketing strategist with 4 years of experience boosting sales and brand visibility through data-driven digital campaigns. Specialized in social media management, email marketing, and lead generation that delivers measurable business growth.
             </p>
             <div className="pt-2 md:pt-4 flex justify-center lg:justify-start">
               <button className="bg-accent-orange text-white text-base md:text-base px-8 md:px-8 py-3 md:py-3.5 rounded-full font-medium hover:bg-accent-orange/90 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 shadow-lg">

@@ -10,31 +10,31 @@ export default function Services() {
   }, []);
   const services = [
     {
-      title: "Social Media Management",
+      title: "Social Media Marketing",
       description:
-        "Complete social media management including content creation, scheduling, and community engagement across all platforms.",
+        "Strategic social media management across Facebook, Instagram, TikTok, and Pinterest. Content creation, community engagement, and campaigns that boost brand visibility and drive sales.",
       icon: "📱",
       bgColor: "bg-pink-50",
     },
     {
-      title: "Paid Advertising",
+      title: "Email Marketing",
       description:
-        "Strategic ad campaigns on Facebook, Instagram, Google, and TikTok that drive conversions and maximize ROI.",
-      icon: "🎯",
+        "Automated email campaigns using Klaviyo, Mailchimp, and HighLevel. From welcome sequences to abandoned cart flows, I create emails that convert and nurture leads effectively.",
+      icon: "✉️",
       bgColor: "bg-blue-50",
     },
     {
-      title: "Content Creation",
+      title: "Content & Design",
       description:
-        "Eye-catching graphics, engaging captions, and compelling video content that resonates with your audience.",
+        "High-quality visuals, video editing, and copywriting that aligns with your brand. From social graphics to reel scripts, I create content that captures attention and drives engagement.",
       icon: "✨",
       bgColor: "bg-purple-50",
     },
     {
-      title: "Analytics & Reporting",
+      title: "Lead Generation & Funnels",
       description:
-        "In-depth performance analysis and monthly reports to track growth and optimize your social media strategy.",
-      icon: "📊",
+        "Strategic lead generation campaigns, funnel design using GoHighLevel, and marketing automation with ManyChat. Convert prospects into customers with proven systems.",
+      icon: "🎯",
       bgColor: "bg-amber-50",
     },
   ];

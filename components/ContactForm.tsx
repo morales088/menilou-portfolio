@@ -14,7 +14,7 @@ export default function ContactForm() {
               Ready to Grow Your Business?
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Let&apos;s discuss how I can help you dominate social media and create high-converting ad campaigns. Fill out the form below or reach out directly!
+              Let&apos;s discuss your marketing goals. Whether you need social media management, email campaigns, or lead generation strategies, I&apos;m here to help drive results.
             </p>
             <form className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -58,7 +58,7 @@ export default function ContactForm() {
               Share Your Goals
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Tell me about your business and social media goals. Let&apos;s create a strategy that delivers measurable results.
+              Tell me about your business challenges and objectives. Together, we&apos;ll create marketing strategies that deliver measurable growth.
             </p>
             <form className="space-y-4">
               <input

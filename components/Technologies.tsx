@@ -9,17 +9,17 @@ export default function Technologies() {
     setMounted(true);
   }, []);
   const technologies = [
+    { name: "Klaviyo", icon: "✉️" },
+    { name: "Mailchimp", icon: "📧" },
+    { name: "GoHighLevel", icon: "🚀" },
+    { name: "ManyChat", icon: "💬" },
+    { name: "Canva", icon: "🎨" },
+    { name: "Shopify", icon: "🛒" },
     { name: "Facebook", icon: "📘" },
     { name: "Instagram", icon: "📷" },
     { name: "TikTok", icon: "🎵" },
-    { name: "LinkedIn", icon: "💼" },
-    { name: "YouTube", icon: "📺" },
-    { name: "Canva", icon: "🎨" },
-    { name: "Meta Ads", icon: "🎯" },
-    { name: "Google Ads", icon: "🔍" },
-    { name: "Hootsuite", icon: "🦉" },
-    { name: "Buffer", icon: "📊" },
-    { name: "Analytics", icon: "📈" },
+    { name: "Pinterest", icon: "📌" },
+    { name: "Skool", icon: "🎓" },
   ];
 
   return (
@@ -30,10 +30,10 @@ export default function Technologies() {
             PLATFORMS & TOOLS
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            Platforms I Master
+            Tools & Platforms I Use
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Proficient in all major social media platforms and the best tools for management, analytics, and advertising to maximize your reach and engagement.
+            Expert in email marketing platforms, automation tools, social media management, and e-commerce solutions that streamline workflows and maximize results.
           </p>
         </div>
 

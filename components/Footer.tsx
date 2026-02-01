@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-background-dark text-white py-16">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <div className="text-3xl font-bold mb-4">PORTFOLIO</div>
+          <div className="text-3xl font-bold mb-4">MENILOU MARVIDA</div>
           <div className="flex justify-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
               <span key={i} className="text-2xl">
@@ -20,7 +20,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-gray-400 max-w-md mx-auto">
-            Your trusted Virtual Assistant for Social Media Management & Advertising. Let&apos;s grow your business together!
+            Marketing Strategist | Helping businesses grow through data-driven social media and email marketing strategies.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            © 2024 Portfolio. All Rights Reserved.
+            © 2026 Menilou Marvida. All Rights Reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a

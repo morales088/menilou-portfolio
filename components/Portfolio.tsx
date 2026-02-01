@@ -10,34 +10,34 @@ export default function Portfolio() {
   }, []);
   const portfolioItems = [
     {
-      title: "Fashion Brand",
-      category: "Instagram & Facebook Ads",
-      image: "👗",
+      title: "Australian Fitness Coach",
+      category: "Social Media & Lead Generation",
+      image: "🏋️",
     },
     {
-      title: "Tech Startup",
-      category: "LinkedIn Campaign",
-      image: "💻",
+      title: "US Real Estate Lawyer",
+      category: "Email Marketing & Community Management",
+      image: "🏛️",
     },
     {
-      title: "E-commerce Store",
-      category: "TikTok & Meta Ads",
+      title: "Pet Wellness Shop",
+      category: "GHL Funnels & Automation",
+      image: "🐾",
+    },
+    {
+      title: "E-commerce Brands",
+      category: "Shopify & Email Marketing",
       image: "🛍️",
     },
     {
-      title: "Fitness Coach",
-      category: "Social Media Management",
-      image: "💪",
+      title: "International Swimwear",
+      category: "Influencer Marketing & Pinterest",
+      image: "👙",
     },
     {
-      title: "Restaurant Chain",
-      category: "Local Business Ads",
-      image: "🍕",
-    },
-    {
-      title: "Beauty Salon",
-      category: "Instagram Growth",
-      image: "💅",
+      title: "US Restaurant",
+      category: "Social Media Strategy & Analytics",
+      image: "🍽️",
     },
   ];
 
@@ -49,10 +49,10 @@ export default function Portfolio() {
             SUCCESS STORIES
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 text-white">
-            Campaigns That Delivered Results
+            Real Results for Real Businesses
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            From startups to established brands, I&apos;ve helped businesses across industries achieve their social media and advertising goals.
+            From fitness coaches to e-commerce brands, I&apos;ve delivered measurable growth across diverse industries through strategic marketing campaigns.
           </p>
         </div>
 

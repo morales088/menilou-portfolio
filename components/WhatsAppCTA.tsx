@@ -4,7 +4,7 @@ export default function WhatsAppCTA() {
       <div className="container-custom">
         <div className="text-center animate-fade-in">
           <p className="text-lg md:text-xl text-gray-700 mb-6">
-            Ready to boost your social media presence? Let&apos;s chat on WhatsApp!
+            Ready to grow your business? Let&apos;s discuss your marketing goals on WhatsApp!
           </p>
           <button className="btn-green">START A CONVERSATION</button>
         </div>
