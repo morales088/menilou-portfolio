@@ -25,46 +25,7 @@ export default function AboutMe() {
               Marketing strategist with 4 years of proven experience driving sales and brand visibility through innovative digital campaigns. I specialize in social media management, email marketing automation, and lead generation strategies that deliver measurable business growth. From content creation to analytics, I bring data-driven insights and creative execution to every project.
             </p>
 
-            <div className="space-y-4 pt-4">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-accent-orange/10 flex items-center justify-center">
-                  <span className="text-lg">📞</span>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500">Phone / WhatsApp</div>
-                  <div className="font-medium">+63 931 181 6804</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-accent-orange/10 flex items-center justify-center">
-                  <span className="text-lg">✉️</span>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500">Email</div>
-                  <div className="font-medium">meni.digitalmarketing@gmail.com</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-accent-orange/10 flex items-center justify-center">
-                  <span className="text-lg">📍</span>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500">Location</div>
-                  <div className="font-medium">Quezon Province, Philippines</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-accent-orange/10 flex items-center justify-center">
-                  <span className="text-lg">🎓</span>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500">Education</div>
-                  <div className="font-medium">BS Industrial Engineering</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-4 pt-6">
               {["Facebook", "Twitter", "LinkedIn", "Instagram"].map(
                 (social, index) => (
                   <a
