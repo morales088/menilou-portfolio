@@ -5,7 +5,7 @@ import WhatsAppCTA from "@/components/WhatsAppCTA";
 import Portfolio from "@/components/Portfolio";
 import Technologies from "@/components/Technologies";
 import Testimonial from "@/components/Testimonial";
-import Partners from "@/components/Partners";
+// import Partners from "@/components/Partners";
 import AboutMe from "@/components/AboutMe";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ export default function Home() {
       <Portfolio />
       <Technologies />
       <Testimonial />
-      <Partners />
+      {/* <Partners /> */}
       <AboutMe />
       <ContactForm />
       <Footer />

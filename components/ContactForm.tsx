@@ -100,30 +100,16 @@ export default function ContactForm() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
                 />
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input
-                  type="tel"
-                  placeholder="Contact Number"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
-                />
-                <input
-                  type="text"
-                  placeholder="Skype"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
-                />
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
-                />
-                <input
-                  type="text"
-                  placeholder="interested in"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
-                />
-              </div>
+              <input
+                type="tel"
+                placeholder="Contact Number"
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
+              />
               <textarea
                 placeholder="Message"
                 rows={5}

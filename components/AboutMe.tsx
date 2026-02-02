@@ -1,3 +1,5 @@
+"use client";
+
 export default function AboutMe() {
   return (
     <section className="section-padding bg-background-light">
@@ -6,8 +8,17 @@ export default function AboutMe() {
           {/* Left Column - Image */}
           <div className="animate-fade-in">
             <div className="relative w-full max-w-md mx-auto lg:mx-0">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent-orange/20 to-pink-200/30 flex items-center justify-center overflow-hidden">
-                <div className="text-6xl">👋</div>
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent-orange/20 to-pink-200/30 flex items-center justify-center overflow-hidden p-6">
+                <img
+                  src="/lets-connect.png"
+                  alt="Let's Connect"
+                  className="w-[100%] h-[100%] object-contain"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = '<div class="text-6xl">👋</div>';
+                  }}
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent-orange/10 rounded-full blur-2xl animate-pulse" />
             </div>

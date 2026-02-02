@@ -54,7 +54,7 @@ export default function Hero() {
                 src="/hero-image.png"
                 alt="Professional portrait"
                 className="w-full h-auto object-contain object-bottom"
-                style={{ maxHeight: '60vh' }}
+                style={{ maxHeight: '85vh' }}
                 onError={(e) => {
                   const target = e.currentTarget;
                   target.style.display = 'none';
@@ -64,22 +64,22 @@ export default function Hero() {
           </div>
 
           {/* Mobile Order 3 / Desktop Order 3 - Stats Cards */}
-          <div className="order-3 space-y-4 md:space-y-5 animate-fade-in">
+          <div className="order-3 space-y-6 md:space-y-8 animate-fade-in flex flex-col items-center lg:items-start">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 animate-slide-up"
+                className="transition-all duration-300 animate-slide-up w-full max-w-md lg:max-w-none"
                 style={mounted ? { animationDelay: `${index * 0.15}s` } : undefined}
               >
-                <div className="flex items-center gap-3 md:gap-4">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-background-pink flex items-center justify-center text-xl md:text-2xl flex-shrink-0">
+                <div className="flex items-center gap-3 md:gap-4 justify-center lg:justify-start">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center text-2xl md:text-3xl flex-shrink-0 shadow-md">
                     {stat.icon}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-0.5 md:mb-1 leading-none">
+                  <div className="flex-1 min-w-0 text-center lg:text-left">
+                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1 md:mb-2 leading-none">
                       {stat.number}
                     </div>
-                    <div className="text-xs md:text-sm text-gray-600 leading-tight">
+                    <div className="text-sm md:text-base text-gray-700 leading-tight font-medium">
                       {stat.label}
                     </div>
                   </div>
