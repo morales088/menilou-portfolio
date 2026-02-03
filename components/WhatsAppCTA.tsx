@@ -6,7 +6,14 @@ export default function WhatsAppCTA() {
           <p className="text-lg md:text-xl text-gray-700 mb-6">
             Ready to grow your business? Let&apos;s discuss your marketing goals on WhatsApp!
           </p>
-          <button className="btn-green">START A CONVERSATION</button>
+          <a
+            href="https://wa.me/639311816804?text=Hi%20Menilou,%20I'm%20interested%20in%20your%20marketing%20services!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-green inline-block"
+          >
+            START A CONVERSATION
+          </a>
         </div>
       </div>
     </section>

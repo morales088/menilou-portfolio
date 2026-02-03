@@ -38,12 +38,17 @@ export default function Hero() {
               Results-driven marketing strategist with 4 years of experience boosting sales and brand visibility through data-driven digital campaigns. Specialized in social media management, email marketing, and lead generation that delivers measurable business growth.
             </p>
             <div className="pt-2 md:pt-4 flex justify-center lg:justify-start">
-              <button className="bg-accent-orange text-white text-base md:text-base px-8 md:px-8 py-3 md:py-3.5 rounded-full font-medium hover:bg-accent-orange/90 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 shadow-lg">
+              <a
+                href="https://wa.me/639311816804?text=Hi%20Menilou,%20I'd%20like%20to%20discuss%20a%20project%20with%20you!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-accent-orange text-white text-base md:text-base px-8 md:px-8 py-3 md:py-3.5 rounded-full font-medium hover:bg-accent-orange/90 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 shadow-lg"
+              >
                 Hire Me
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
 

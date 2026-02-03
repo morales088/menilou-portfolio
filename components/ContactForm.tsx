@@ -1,6 +1,59 @@
 "use client";
 
+import { useState } from 'react';
+
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    contactNumber: '',
+    subject: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          contactNumber: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="section-padding bg-background-peach">
       <div className="container-custom">
@@ -87,36 +140,71 @@ export default function ContactForm() {
             <p className="text-gray-600 leading-relaxed mb-8">
               Tell me about your business challenges and objectives. Together, we&apos;ll create marketing strategies that deliver measurable growth.
             </p>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Full Name"
+                  required
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email Address"
+                  required
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
                 />
               </div>
               <input
                 type="tel"
+                name="contactNumber"
+                value={formData.contactNumber}
+                onChange={handleChange}
                 placeholder="Contact Number"
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
               />
               <input
                 type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
                 placeholder="Subject"
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white"
               />
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Message"
+                required
                 rows={5}
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-accent-orange focus:outline-none transition-colors bg-white resize-none"
               />
-              <button type="submit" className="bg-accent-orange text-white px-8 py-3.5 rounded-lg font-medium hover:bg-accent-orange/90 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 w-full justify-center">
-                Send your inquiry
+              
+              {submitStatus === 'success' && (
+                <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
+                  ✓ Message sent successfully! I&apos;ll get back to you soon.
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
+                  ✗ Failed to send message. Please try again or contact me directly.
+                </div>
+              )}
+              
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-accent-orange text-white px-8 py-3.5 rounded-lg font-medium hover:bg-accent-orange/90 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Sending...' : 'Send your inquiry'}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
